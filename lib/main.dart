@@ -85,6 +85,7 @@ class _Accelerometers extends State<Accelerometers> {
       _streamSubscriptions = <StreamSubscription<dynamic>>[];
       String csv = const ListToCsvConverter().convert(rows);
       Share.share(csv);
+      rows = [];
     }
 
     return SafeArea(
@@ -124,7 +125,7 @@ class _Accelerometers extends State<Accelerometers> {
                           style: const TextStyle(
                             color: Colors.white,
                           ),
-                        )),
+                        )), 
                       ),
                     ),
                   ],
